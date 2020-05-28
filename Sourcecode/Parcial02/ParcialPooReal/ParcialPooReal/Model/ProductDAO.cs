@@ -36,5 +36,13 @@ namespace ParcialPooReal.Model
 
             Connection.makeAction(sql);
         }
+        public static void dropProduct(string idProduct)
+        {
+            string sql = string.Format(
+             "delete from PRODUCT where idProduct={0};",
+             idProduct);
+
+            Connection.makeAction(sql);
+        }
     }
 }
